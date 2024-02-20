@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <title>To Do List</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="login-container">
+            <div class="form-container" id="loginForm">
+                <h2>Login</h2>
+                <form>
+                    <label for="loginEmail">Email:</label>
+                    <input type="email" id="loginEmail" name="loginEmail" required>
+                    <br>
+                    <label for="loginPassword">Password:</label>
+                    <input type="password" id="loginPassword" name="loginPassword" required>
+                    <br>
+                    <button type="button" id="loginBtn">Login</button>
+                </form>
+                <div class="toggle-btn" onclick="toggleForm()">Switch to Registration</div>
+            </div>
+
+            <div class="form-container" id="registrationForm" style="display: none;">
+                <h2>Registration</h2>
+                <form>
+                    <label for="regName">Name:</label>
+                    <input type="text" id="regName" name="regName" required>
+                    <br>
+                    <label for="regEmail">Email:</label>
+                    <input type="email" id="regEmail" name="regEmail" required>
+                    <br>
+                    <label for="regPassword">Password:</label>
+                    <input type="password" id="regPassword" name="regPassword" required>
+                    <br>
+                    <button type="button" id="registerBtn">Register</button>
+                </form>
+                <div class="toggle-btn" onclick="toggleForm()">Switch to Login</div>
+            </div>
+        </div>
+
+        <div class="main">
+            <div id="myDIV" class="header">
+                <h2>To Do List</h2>
+                <span class="addBtn">Add</span>
+                <span class="changeBtn">Change user</span>
+                <h2>GET Request</h2>
+                <button  id="get">Send GET Request</button>
+                <p id="getResponse"></p>
+                
+                <h2>POST Request</h2>
+                <label for="name">Name:</label>
+                <input type="text" id="name">
+                <label for="age">Age:</label>
+                <input type="text" id="age">
+                <label for="email">Email:</label>
+                <input type="text" id="email">
+                <button id="post">Submit</button>
+                <p id="postResponse"></p>
+                
+                <h2>PUT Request</h2>
+                <label for="putName">Name:</label>
+                <input type="text" id="putName">
+                <label for="putAge">Age:</label>
+                <input type="text" id="putAge">
+                <label for="putEmail">Email:</label>
+                <input type="text" id="putEmail">
+                <button id="put">Submit</button>
+                <p id="putResponse"></p>
+                
+                <h2>DELETE Request</h2>
+                <label for="deleteName">Name:</label>
+                <input type="text" id="deleteName">
+                <button id="delete">Submit</button>
+                <p id="deleteResponse"></p>
+            </div>
+
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="index.js"></script>
+</body>
+
+</html>
